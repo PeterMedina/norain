@@ -19,10 +19,7 @@ def is_day(data: str, pos: int):
     try:
         if data:
             is_day = data["properties"]["periods"][pos]["isDaytime"]
-            if is_day:
-                return True
-            else:
-                return False
+            return is_day
     except Exception as e:
         print(e)
 
