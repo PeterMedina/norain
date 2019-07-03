@@ -39,15 +39,15 @@ def advice(temp: int):
             advice: str
 
             if temp < 50:
-                advice = "You should consider bringing a jacket."
+                advice = "You should consider bringing a jacket"
             elif temp >= 50 and temp < 70:
-                advice = "You should consider bringing a sweater."
+                advice = "You should consider bringing a sweater"
             elif temp >= 70 and temp < 85:
-                advice = "Wearing layers wouldn't hurt."
+                advice = "Wearing layers wouldn't hurt"
             elif temp >= 80 and temp < 95:
-                advice = "Keep cool and drink plenty of water."
+                advice = "Keep cool and drink plenty of water"
             else:
-                advice = "Limit outdoor activities and stay hydrated."
+                advice = "Limit outdoor activities and stay hydrated"
 
         return advice
 
@@ -83,8 +83,8 @@ def make_forecast_json(data: str):
             tomorrow_advice: str = advice(tomorrow_temperature)
 
             weather_forecast: dict = {
-                "current_conditions": "It's currently " + str(current_temperature) + "°f. " + current_advice + " Wind speeds are " + current_wind + ".",
-                "tomorrow_conditions": "Tomorrow will be " + str(tomorrow_temperature) + "°f. " + tomorrow_advice + " Wind speeds will be " + tomorrow_wind + "."
+                "current_conditions": f"It's currently {current_temperature}°f. {current_advice}. Wind speeds are {current_wind}.",
+                "tomorrow_conditions": f"Tomorrow will be {tomorrow_temperature}°f. {tomorrow_advice}. Wind speeds will be {tomorrow_wind}."
             }
 
             # Convert forecast dict to JSON
